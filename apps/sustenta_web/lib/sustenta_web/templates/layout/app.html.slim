@@ -1,0 +1,30 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
+    title Sustenta - Premio Empresa Sustentable 2019
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:300,400,500,600,700|Merriweather:300,400,700" rel="stylesheet"
+    link rel="stylesheet" href="#{Routes.static_path(@conn, "/css/app.css")}"
+
+  body
+    = render "header.html", conn: @conn
+
+    p.alert.alert-info role="alert"= get_flash(@conn, :info)
+    p.alert.alert-danger role="alert"= get_flash(@conn, :error)
+
+    main role="main"
+      section.site-content
+        .row
+          .col-md-8
+            = render @view_module, @view_template, assigns
+          .col-md-4
+            = render "sidebar.html", conn: @conn
+
+    = render "footer.html"
+
+    script src="#{Routes.static_path(@conn, "/js/app.js")}"

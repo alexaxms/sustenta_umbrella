@@ -1,0 +1,84 @@
+header.site-header
+  .container
+    .row
+      .col-md-3
+        a.brand href=Routes.page_path(@conn, :index)
+          img src='/images/logo-premio.png'
+      .col-md-3
+        ul.brands.utem
+          li
+            a href="http://www.utem.cl" target="_blank"
+              img src='/images/logo-utem2.jpeg'
+          li
+            a href="http://www.utalca.cl/link.cgi/#/link.cgi/" target="_blank"
+              img src='/images/logo-utalca.png'
+          .img-spacer
+          li
+            a href="http://ubiobio.cl/mcc/index.html" target="_blank"
+              img src="/images/logo-ubb2.jpeg"
+          li
+            a href="http://www.pucv.cl/" target="_blank"
+              img src="/images/logo-pucv.png"
+      .col-md-6
+        ul.brands
+          li
+            a href="http://www.economia.gob.cl/" target="_blank"
+              img src='/images/logo-me2.png'
+          li
+            a href="http://www.mintrab.gob.cl/" target="_blank"
+              img src='/images/logo-mintrab2.png'
+          li
+            a href="http://portal.mma.gob.cl/" target="_blank"
+              img src='/images/logo-mma2.png'
+          li
+            a href="http://www.agenciasustentabilidad.cl/" target="_blank"
+              img src='/images/logo-agencia.png'
+          li
+            a href="https://www.mutual.cl" target="_blank"
+              img src='/images/logo-mutual.png'
+          li
+            a href="http://www.eychile.cl/" target="_blank"
+              img src='/images/logo-ey.png'
+          li
+            a href="http://www.diariosustentable.com/" target="_blank"
+              img src='/images/logo-diario.png'
+        ul.brands.secundarias
+          li
+            a href="https://redcampussustentable.cl/" target="_blank"
+              img src='/images/logo-red.jpeg'
+          li
+            a href="https://redcampussustentable.cl/" target="_blank"
+              img src="/images/logo-fundbasura.png"
+          li
+            a href="http://www.electricas.cl/" target="_blank"
+              img src='/images/logo-eeag.png'
+          li
+            a href="http://asilfa.cl/" target="_blank"
+              img src="/images/logo-asilfa.png"
+
+  nav.navbar.navbar-expand-lg.site-nav
+    .container
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            = link "Inicio", to: Routes.page_path(@conn, :index)
+
+          li.nav-item
+            = link "Quiénes Somos", to: Routes.page_path(@conn, :show , "quienes_somos")
+
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+              | Sobre el premio
+            .dropdown-menu aria-labelledby="navbarDropdown"
+              = link "Sobre el premio / Por qué postular", to: Routes.page_path(@conn, :show , "sobre_el_premio"), class: "dropdown-item"
+              = link "Procedimiento de postulación", to: Routes.page_path(@conn, :show , "procedimiento"), class: "dropdown-item"
+
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+              | Ganadores
+            .dropdown-menu aria-labelledby="navbarDropdown"
+              = link "Ganadores 2018", to: Routes.page_path(@conn, :show, "ganadores_2018"), class: "dropdown-item"
+              = link "Ganadores 2017", to: Routes.page_path(@conn, :show, "ganadores_2017"), class: "dropdown-item"
+
+          li.nav-item
+            = link "Datos de interés", to: Routes.page_path(@conn, :show , "datos_de_interes")

@@ -1,0 +1,59 @@
+/* This file is for your main application css. */
+
+@import "custom";
+@import "old_classes";
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.site-nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: $azul-oscuro;
+  padding: 1px;
+  ul {
+    text-transform: uppercase;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+    border-right: 1px solid $azul-claro;
+    color: $gris-claro;
+    font-weight: 600;
+    .dropdown-menu>a {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.42857;
+      color: #333333;
+      white-space: nowrap;
+      text-align: -webkit-match-parent;
+    }
+    .dropdown-menu>a:focus, .dropdown-menu>a:hover {
+      text-decoration: none;
+      color: #262626;
+      background-color: #f5f5f5;
+    }
+  }
+  li a {
+    color: white;
+    font-size: .8rem;
+    display: block;
+    text-align: center;
+    padding: 15px 10px;
+    text-decoration: none;
+  }
+
+   /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: white;
+    color: $azul-oscuro;
+  }
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
