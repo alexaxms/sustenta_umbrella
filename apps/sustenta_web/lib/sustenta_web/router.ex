@@ -17,6 +17,12 @@ defmodule SustentaWeb.Router do
     pipe_through :browser
 
     resources "/", PageController, only: [:index, :show]
+    scope "/survey" do
+      resources "/users", UserController do
+        resources "/companies", CompanyController
+      end
+      resources "/sessions", SessionController, only: [:new, :create, :delete]
+    end
   end
 
   # Other scopes may use custom stacks.

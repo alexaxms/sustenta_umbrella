@@ -3,6 +3,7 @@ defmodule Account.Company do
   import Ecto.Changeset
 
   schema "account_companies" do
+    belongs_to :user, Account.User
     field :activity, :string
     field :activity_code, :string
     field :address, :string

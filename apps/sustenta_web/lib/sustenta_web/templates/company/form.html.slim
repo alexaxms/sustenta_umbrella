@@ -1,0 +1,78 @@
+= form_for @changeset, @action, fn f ->
+  = if @changeset.action do
+    .alert.alert-danger
+      p Oops, something went wrong! Please check the errors below.
+  .form-group
+    = label f, :fantasy_name, class: "control-label"
+    = text_input f, :fantasy_name, class: "form-control"
+    = error_tag f, :fantasy_name
+  .form-group
+    = label f, :business_name, class: "control-label"
+    = text_input f, :business_name, class: "form-control"
+    = error_tag f, :business_name
+  .form-group
+    = label f, :rut, class: "control-label"
+    = text_input f, :rut, class: "form-control"
+    = error_tag f, :rut
+  .form-group
+    = label f, :website, class: "control-label"
+    = text_input f, :website, class: "form-control"
+    = error_tag f, :website
+  .form-group
+    = label f, :email, class: "control-label"
+    = text_input f, :email, class: "form-control"
+    = error_tag f, :email
+  .form-group
+    = label f, :representative, class: "control-label"
+    = text_input f, :representative, class: "form-control"
+    = error_tag f, :representative
+  .form-group
+    = label f, :phone, class: "control-label"
+    = text_input f, :phone, class: "form-control"
+    = error_tag f, :phone
+  .form-group
+    = label f, :address, class: "control-label"
+    = text_input f, :address, class: "form-control"
+    = error_tag f, :address
+  .form-group
+    = label f, :character, class: "control-label"
+    = text_input f, :character, class: "form-control"
+    = error_tag f, :character
+  .form-group
+    = label f, :target, class: "control-label"
+    = text_input f, :target, class: "form-control"
+    = error_tag f, :target
+  .form-group
+    = label f, :office_number, class: "control-label"
+    = text_input f, :office_number, class: "form-control"
+    = error_tag f, :office_number
+  .form-group
+    = label f, :start_of_activities, class: "control-label"
+    = text_input f, :start_of_activities, class: "form-control"
+    = error_tag f, :start_of_activities
+  .form-group
+    = label f, :activity_code, class: "control-label"
+    = text_input f, :activity_code, class: "form-control"
+    = error_tag f, :activity_code
+  .form-group
+    = label f, :activity, class: "control-label"
+    = text_input f, :activity, class: "form-control"
+    = error_tag f, :activity
+  .form-group
+    = label f, :size, class: "control-label"
+    = text_input f, :size, class: "form-control"
+    = error_tag f, :size
+  .form-group
+    = label f, :offer, class: "control-label"
+    = text_input f, :offer, class: "form-control"
+    = error_tag f, :offer
+  .form-group
+    = label f, :region, class: "control-label"
+    = text_input f, :region, class: "form-control"
+    = error_tag f, :region
+  .form-group
+    = label f, :terms, class: "control-label"
+    = text_input f, :terms, class: "form-control"
+    = error_tag f, :terms
+  .form-group
+    = submit "Submit", class: "btn btn-primary"

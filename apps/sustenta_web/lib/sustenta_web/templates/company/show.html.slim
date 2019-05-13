@@ -1,0 +1,58 @@
+h2 Show Company
+
+ul
+  li
+    strong Business name:&nbsp;
+    = @company.business_name
+  li
+    strong Rut:&nbsp;
+    = @company.rut
+  li
+    strong Website:&nbsp;
+    = @company.website
+  li
+    strong Email:&nbsp;
+    = @company.email
+  li
+    strong Representative:&nbsp;
+    = @company.representative
+  li
+    strong Phone:&nbsp;
+    = @company.phone
+  li
+    strong Address:&nbsp;
+    = @company.address
+  li
+    strong Character:&nbsp;
+    = @company.character
+  li
+    strong Target:&nbsp;
+    = @company.target
+  li
+    strong Office number:&nbsp;
+    = @company.office_number
+  li
+    strong Start of activities:&nbsp;
+    = @company.start_of_activities
+  li
+    strong Activity code:&nbsp;
+    = @company.activity_code
+  li
+    strong Activity:&nbsp;
+    = @company.activity
+  li
+    strong Size:&nbsp;
+    = @company.size
+  li
+    strong Offer:&nbsp;
+    = @company.offer
+  li
+    strong Region:&nbsp;
+    = @company.region
+  li
+    strong Terms:&nbsp;
+    = @company.terms
+
+= link "Edit", to: Routes.user_company_path(@conn, :edit, @user, @company), class: "btn btn-default btn-xs"
+| &nbsp;
+= link "Back", to: Routes.user_company_path(@conn, :index, @user)

@@ -6,3 +6,14 @@ section.site-sidebar
         span Inicio de postulación: 1 de Agosto 2019
       li
         span Cierre de postulación: 20 de Septiembre 2019
+
+      li
+        = if user = current_user(@conn) do
+          |Ha ingresado como:
+          br
+          strong
+            = user.username
+          br
+          = link "Cerrar Sesión", to: Routes.session_path(@conn, :delete, user.id), method: :delete
+        - else
+          = link "Ingresar", to: Routes.session_path(@conn, :new)
