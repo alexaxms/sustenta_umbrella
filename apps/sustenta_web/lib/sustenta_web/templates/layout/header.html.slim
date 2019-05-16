@@ -82,3 +82,8 @@ header.site-header
 
           li.nav-item
             = link "Datos de interés", to: Routes.page_path(@conn, :show , "datos_de_interes")
+          li.nav-item
+            = if user = current_user(@conn) do
+              = link "Ver usuarios", to: Routes.user_path(@conn, :index)
+          li.nav-item
+            = link "Template Encuesta", to: Routes.page_path(@conn, :show, "template_encuesta")

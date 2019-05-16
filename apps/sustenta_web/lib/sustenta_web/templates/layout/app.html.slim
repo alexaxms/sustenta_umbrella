@@ -14,8 +14,8 @@ html lang="en"
   body
     = render "header.html", conn: @conn
 
-    p.alert.alert-info role="alert"= get_flash(@conn, :info)
-    p.alert.alert-danger role="alert"= get_flash(@conn, :error)
+  p.alert.alert-info role="alert"= get_flash(@conn, :info)
+  p.alert.alert-danger role="alert"= get_flash(@conn, :error)
 
     main role="main"
       section.site-content

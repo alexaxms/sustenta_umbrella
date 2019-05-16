@@ -1,12 +1,12 @@
-h2 Listing Companies
+h2 Compañias
 
 table.table
   thead
     tr
-      th Fantasy name
-      th Business name
+      th Nombre de fantasía
+      th Nombre
       th Rut
-      th Website
+      th Sitio web
       th
   tbody
     = for company <- @companies do
@@ -16,10 +16,10 @@ table.table
         td= company.rut
         td= company.website
         td class="text-right"
-          = link "Show", to: Routes.user_company_path(@conn, :show, @user, company), class: "btn btn-default btn-xs"
+          = link "Ver", to: Routes.user_company_path(@conn, :show, @user, company), class: "btn btn-default btn-xs"
           | &nbsp;
-          = link "Edit", to: Routes.user_company_path(@conn, :edit, @user, company), class: "btn btn-default btn-xs"
+          = link "Editar", to: Routes.user_company_path(@conn, :edit, @user, company), class: "btn btn-default btn-xs"
           | &nbsp;
-          = link "Delete", to: Routes.user_company_path(@conn, :delete, @user, company), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
+          = link "Eliminar", to: Routes.user_company_path(@conn, :delete, @user, company), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
 
-= link "New Company", to: Routes.user_company_path(@conn, :new, @user)
+= link "Nueva Compañía", to: Routes.user_company_path(@conn, :new, @user)

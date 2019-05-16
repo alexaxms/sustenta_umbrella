@@ -9,11 +9,9 @@ section.site-sidebar
 
       li
         = if user = current_user(@conn) do
-          |Ha ingresado como:
+          span Ha ingresado como:
+          = user.username
           br
-          strong
-            = user.username
-          br
-          = link "Cerrar Sesión", to: Routes.session_path(@conn, :delete, user.id), method: :delete
+          = link "Cerrar Sesión", to: Routes.session_path(@conn, :delete, user.id), method: :delete, class: "btn btn-primary"
         - else
-          = link "Ingresar", to: Routes.session_path(@conn, :new)
+          = link "Ingresar", to: Routes.session_path(@conn, :new), class: "btn btn-primary"
